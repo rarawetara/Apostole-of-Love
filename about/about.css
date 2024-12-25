@@ -1,1 +1,71 @@
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 
+.about-main {
+    padding: 120px 60px 50px 60px;
+    position: relative;
+    min-height: 100vh;
+    overflow: visible;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 100px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-text h1 {
+    font-size: 58px;
+    line-height: 1.2;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.about-text p {
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.about-text .birth {
+    margin-bottom: 30px;
+}
+
+.author-photo {
+    align-self: flex-end;
+    width: 450px;
+    margin-top: -50px;
+}
+
+.author-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 500px 500px 20px 20px;
+    object-fit: cover;
+}
+
+.angels-decoration {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+}
+
+.angels-decoration img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
