@@ -1,0 +1,165 @@
+:root {
+    /* Цветовая палитра */
+    --background-color: #FFF5EB;
+    --primary-color: #E9AC7A;
+    --text-color: #2F2F2F;
+    --accent-color: #E76F51;
+    --border-color: #E76F51;
+    
+    /* Стили бордера и закругления */
+    --border-bottom: 5px solid var(--border-color);
+    --border-radius-large: 40px;
+    --border-radius-small: 20px;
+    --border-radius-bottom: 100px;
+}
+
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Times New Roman', serif;
+    color: var(--text-color);
+}
+
+/* Стили хедера */
+header {
+    display: flex;
+    align-items: center;
+    padding: 15px 60px;
+    justify-content: space-between;
+    margin: 0;
+    height: 80px;
+    max-height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--background-color);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-nav {
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul.all-active {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius-large);
+    border-bottom: var(--border-bottom);
+
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 25px !important;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.main-nav .active-page {
+    background-color: var(--primary-color) !important;
+    border-radius: var(--border-radius-large);
+    border-bottom: var(--border-bottom);
+    display: inline-block;
+    color: var(--text-color);
+    padding: 15.5px 40.5px !important;
+}
+
+/* Стили для языкового селектора */
+.language-selector {
+    position: relative;
+    background-color: var(--primary-color);
+    padding: 15px 30px;
+    border-radius: var(--border-radius-small);
+    text-align: center;
+}
+
+.current-lang {
+    cursor: pointer;
+}
+
+.lang-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    border-radius: 0 0 var(--border-radius-bottom) var(--border-radius-bottom);
+    padding-bottom: 20px;
+    border-bottom: var(--border-bottom);
+    text-align: center;
+}
+
+.lang-options div {
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+.language-selector:hover .lang-options {
+    display: block;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logo a:hover {
+    color: var(--accent-color);
+}
+
+.language-selector:hover {
+    border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+}
+
+/* Добавляем общие стили для main */
+main {
+    position: relative;
+    padding-top: 80px;
+    margin: 0;
+    overflow: hidden;
+    min-height: calc(100vh - 80px);
+}
+
+/* Можно удалить или оставить специфичные стили для index-main, 
+   так как они теперь дублируют общие стили */
+.index-main {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+
