@@ -79,3 +79,9 @@
     opacity: 0.8;
     margin-bottom: 60px;
 }
+
+.product-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
