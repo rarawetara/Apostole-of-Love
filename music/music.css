@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.music-grid {
+    padding: 100px 40px 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Текстовый блок - базовые стили */
+.text-block {
+    background-color: rgb(196, 164, 164);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+    height: 325px;
+    width: 650px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Стили при наведении */
+.text-block:hover {
+    height: 450px;
+    transform: scale(1.02);
+    z-index: 1;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Контейнер для текста */
+.text-content {
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Дополнительный текст (скрытый по умолчанию) */
+.text-block .additional-text {
+    opacity: 0;
+    height: 0;
+    transition: all 0.3s ease;
+}
+
+/* Показываем дополнительный текст при наведении */
+.text-block:hover .additional-text {
+    opacity: 1;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* Блок с изображением - квадратный */
+.image-block {
+    background-color: rgb(196, 164, 164);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+    width: 325px; /* Уменьшили с 375px до 325px */
+    height: 325px; /* Уменьшили с 375px до 325px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-block h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 36px; /* Уменьшили с 42px до 36px */
+    margin: 0 0 20px 0;
+    color: var(--text-color);
+}
+
+.text-block p {
+    font-family: 'Times New Roman', serif;
+    font-size: 18px; /* Уменьшили с 21px до 18px */
+    line-height: 1.4;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.image-block img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-block, .image-block {
+    position: relative;
+    box-shadow: 
+        2px 2px 4px rgba(0,0,0,0.2),
+        0 0 0 1px rgba(0,0,0,0.05);
+}
+
+/* Выравнивание блоков */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grid-container > div:nth-child(1),
+.grid-container > div:nth-child(2) {
+    display: flex;
+    gap: 15px;
+}
+
+/* Первый ряд */
+.grid-container > div:nth-child(1) .text-block {
+    margin-right: auto;
+}
+
+.grid-container > div:nth-child(1) .image-block {
+    margin-left: auto;
+}
+
+/* Второй ряд */
+.grid-container > div:nth-child(2) .image-block {
+    margin-right: auto;
+}
+
+.grid-container > div:nth-child(2) .text-block {
+    margin-left: auto;
+}
