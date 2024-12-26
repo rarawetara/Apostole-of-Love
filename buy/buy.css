@@ -7,10 +7,10 @@
 .products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 60px 40px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 100px; /* Отступ для ангелов */
+    padding-bottom: 100px;
 }
 
 .product-item {
@@ -20,11 +20,38 @@
     text-align: center;
 }
 
-.product-item img {
+.image-container {
+    position: relative;
     width: 100%;
     max-width: 200px;
+}
+
+.main-image {
+    width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    display: block;
+}
+
+.hover-image {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.hover-image img {
+    width: 100%;
+    height: auto;
+}
+
+.image-container:hover .hover-image {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%);
 }
 
 .product-item h3 {
@@ -32,11 +59,12 @@
     font-weight: 300;
     color: var(--text-color);
     font-family: 'Times New Roman', serif;
+    margin-top: 20px;
 }
 
 .angels-decoration {
     position: absolute;
-    bottom: -122px;
+    bottom: -121px;
     left: 50%;
     transform: translateX(-50%);
     width: 300px;
