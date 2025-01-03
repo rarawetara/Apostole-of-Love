@@ -98,7 +98,7 @@ header {
     border-bottom: var(--border-bottom);
     display: inline-block;
     color: var(--text-color);
-    padding: 0.96875rem 2.53125rem !important;
+    padding: 0.5rem 1rem !important;
 }
 
 /* Стили для языкового селектора */
@@ -179,6 +179,9 @@ main {
     .logo {
         font-size: 1rem;
     }
+    .main-nav .active-page {
+        padding: 0.3rem 0.6rem !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -187,25 +190,30 @@ main {
     }
     .main-nav ul {
         gap: 0.0625rem !important;
+        align-items: normal;
     }
     .main-nav a {
-        font-size: 0.5625rem;
+        font-size: 0.5rem;
         padding: 0.0625rem 0.1875rem !important;
     }
     .logo {
         font-size: 0.75rem;
     }
-    .cart {
-        font-size: 0.625rem;
-        padding: 0rem 0.125rem;
+    .cart-icon {
+        font-size: 0.5rem !important;
+        padding: 0rem 0.1rem !important;
     }
     .language-selector {
-        font-size: 0.75rem;
+        font-size: 0.6rem;
         padding: 0.1875rem 0.375rem;
     }
     .lang-options div {
         font-size: 0.625rem;
         padding: 0.125rem 0.375rem;
+    }
+    .main-nav .active-page {
+       
+        padding: 0.2rem 0.1rem !important;
     }
 }
 
