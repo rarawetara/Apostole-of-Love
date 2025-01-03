@@ -158,8 +158,7 @@ main {
     min-height: calc(100vh - 80px);
 }
 
-/* Можно удалить или оставить специфичные стили для index-main, 
-   так как они теперь дублируют общие стили */
+
 .index-main {
     position: relative;
     padding: 0;
