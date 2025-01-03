@@ -1,7 +1,6 @@
 .listen-main {
-    padding: 120px 60px 50px 60px;
+    padding: 30px 60px 50px 60px;
     position: relative;
-    min-height: 100vh;
     overflow: visible;
 }
 
@@ -93,4 +92,68 @@ h1 {
     height: auto;
     opacity: 0.8;
     margin-bottom: 60px;
+}
+
+/* Средние экраны (планшеты) */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 0 40px;
+        flex-wrap: wrap;
+    }
+
+    .description {
+        flex: 0 1 500px;
+        text-align: justify;
+    }
+    .angels-decoration img {
+        margin-bottom: 30px;
+    }
+}
+
+/* Маленькие экраны (мобильные) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 19px;
+        line-height: 1.2;
+        text-align: left;
+        font-weight: 300;
+        /* margin-bottom: 60px; */
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        color: var(--text-color);
+    }
+
+    .platform-link {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .platforms-list {
+        flex: 0 0 100%;
+        padding: 0;
+    }
+
+    .description {
+        flex: 0 1 100%;
+        text-align: left;
+        padding: 0;
+    }
+    .description p {
+        margin-bottom: 75px;
+    }
+    .content-wrapper {
+        gap: 30px;
+        padding: 0;
+    }
+
+    .listen-main {
+        padding: 20px;
+    }
 }
