@@ -27,14 +27,21 @@ body {
     transition: all 0.3s ease;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
 
 /* Стили при наведении */
-.text-block:hover {
-    height: 450px;
-    transform: scale(1.02);
-    z-index: 1;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+.text-block.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: 90vh;
+    z-index: 1000;
+    padding: 40px;
+    display: flex;
+    gap: 40px;
 }
 
 /* Контейнер для текста */
@@ -44,33 +51,34 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Дополнительный текст (скрытый по умолчанию) */
+/* Дополнительный текст */
 .text-block .additional-text {
     opacity: 0;
     height: 0;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 /* Показываем дополнительный текст при наведении */
-.text-block:hover .additional-text {
+.text-block.expanded .additional-text {
     opacity: 1;
     height: auto;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
-/* Блок с изображением - квадратный */
+/* Блок с изображением */
 .image-block {
     background-color: rgb(196, 164, 164);
     border-radius: 20px;
     padding: 20px;
     box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
-    width: 325px; /* Уменьшили с 375px до 325px */
-    height: 325px; /* Уменьшили с 375px до 325px */
+    width: 325px;
+    height: 325px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Стили заголовка и текста */
 .text-block h1 {
     font-family: 'Times New Roman', serif;
     margin: 0 0 20px 0;
@@ -81,50 +89,136 @@ body {
     margin: 0;
 }
 
+/* Изображения */
 .image-block img {
     width: 70%;
     height: auto;
     border-radius: 10px;
 }
 
-.text-right {
+/* Контент при развертывании */
+.text-block.expanded .text-content {
+    width: 60%;
+}
+
+/* Изображение при развертывании */
+.text-block.expanded .expanded-image {
+    display: block;
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    order: 1;
+}
+
+/* Для правого блока */
+.text-block.text-right.expanded .expanded-image {
+    order: -1;
+}
+
+.text-block.text-right.expanded .text-content {
     text-align: right;
 }
 
-.text-block, .image-block {
-    position: relative;
-    box-shadow: 
-        2px 2px 4px rgba(0,0,0,0.2),
-        0 0 0 1px rgba(0,0,0,0.05);
-}
-
-/* Выравнивание блоков */
+/* Убираем лишние стили выравнивания блоков */
 .grid-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.grid-container > div:nth-child(1),
-.grid-container > div:nth-child(2) {
+.grid-container > div {
     display: flex;
     gap: 15px;
 }
 
-/* Первый ряд */
-.grid-container > div:nth-child(1) .text-block {
-    margin-right: auto;
+/* Стили для планшетов */
+@media (max-width: 1024px) {
+    .text-block.expanded {
+        width: 95vw;
+        height: 95vh;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .text-block.expanded .text-content {
+        width: 55%;
+        font-size: 0.9em;
+    }
+
+    .text-block.expanded .expanded-image {
+        width: 45%;
+    }
+
+    .text-block h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
 }
 
-.grid-container > div:nth-child(1) .image-block {
-    margin-left: auto;
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    .text-block.expanded {
+        width: 100vw;
+        height: 100vh;
+        padding: 20px;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .text-block.expanded .text-content {
+        width: 100%;
+        font-size: 0.85em;
+        order: 2;
+    }
+
+    .text-block.expanded .expanded-image {
+        width: 100%;
+        height: auto;
+        max-height: 40vh;
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .text-block h1 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .text-block p {
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    /* Исправляем выравнивание для правого блока на мобильных */
+    .text-block.text-right.expanded .text-content {
+        text-align: left;
+    }
+
+    /* Добавляем отступы для лучшей читаемости */
+    .text-block.expanded .additional-text {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
 }
 
-/* Второй ряд */
-.grid-container > div:nth-child(2) .image-block {
-    margin-right: auto;
-}
+/* Стили для маленьких экранов */
+@media (max-width: 480px) {
+    .text-block.expanded {
+        padding: 15px;
+    }
 
-.grid-container > div:nth-child(2) .text-block {
-    margin-left: auto;
+    .text-block h1 {
+        font-size: 18px;
+    }
+
+    .text-block p {
+        font-size: 0.8em;
+        line-height: 1.4;
+    }
+
+    .text-block.expanded .expanded-image {
+        max-height: 35vh;
+    }
 }
