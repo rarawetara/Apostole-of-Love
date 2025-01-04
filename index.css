@@ -77,8 +77,8 @@ main {
 @media (max-width: 1000px) {
 
     .angels-container {
-        top: -100px;
-        width: 80%;
+        top: -120px;
+        width: 40%;
     }
 
     .welcome-container {
@@ -110,12 +110,12 @@ main {
 
 @media (max-width: 480px) {
     .angels-container {
-        top: -100px;
-        width: 80%;
+        top: -40px;
+        width: 35%;
     }
 
     .angels-image {
-        height: 298px;
+        height: 150px;
     }
 
     .welcome-container {

@@ -259,7 +259,7 @@ p {
 
 /* Общие стили для main секций */
 .page-main {
-    padding: 120px 60px 50px 60px;
+    padding: 0px 60px 50px 60px;
     position: relative;
     min-height: 100vh;
     overflow: visible;

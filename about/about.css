@@ -8,7 +8,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 
 }
 
@@ -67,7 +67,7 @@ body {
         justify-content: space-between;
         align-items: stretch;
         gap: 40px;
-        margin-bottom: 40px;
+
         flex-direction: column;
         flex-wrap: nowrap;
     }

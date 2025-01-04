@@ -78,14 +78,14 @@
     }
 }
 
-/* Стили для платформ */
 .platforms-list {
-    display: flex;
+    display: flex
+;
     flex-direction: column;
-    gap: 15px;
-    max-width: 600px; /* Увеличиваем ширину для больших экранов */
+    /* gap: 15px; */
+    max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .platform-link {
@@ -155,7 +155,7 @@
     gap: 40px; /* Расстояние между колонками */
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 0px 40px 30px 40px;
 }
 
 .platforms-list {
