@@ -9,7 +9,7 @@ body {
     align-items: flex-start;
     gap: 40px;
     margin-bottom: 40px;
-    padding-bottom: 100px;
+
 }
 
 .about-text {
@@ -18,7 +18,7 @@ body {
 }
 
 .about-text .birth {
-    margin-bottom: 30px;
+    margin: 20px 0 5px 0px;
 }
 
 .author-photo {
@@ -58,6 +58,7 @@ body {
         height: auto;
         border-radius: 500px 500px 20px 20px;
         object-fit: cover;
+        margin-bottom: 30px;
     
     }
     .about-content {
@@ -67,7 +68,6 @@ body {
         align-items: stretch;
         gap: 40px;
         margin-bottom: 40px;
-        padding-bottom: 100px;
         flex-direction: column;
         flex-wrap: nowrap;
     }
