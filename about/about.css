@@ -3,13 +3,6 @@ body {
     overflow-x: hidden;
 }
 
-.about-main {
-    padding: 120px 60px 50px 60px;
-    position: relative;
-    min-height: 100vh;
-    overflow: visible;
-}
-
 .about-content {
     display: flex;
     justify-content: space-between;
@@ -22,22 +15,6 @@ body {
 .about-text {
     flex: 1;
     max-width: 600px;
-}
-
-.about-text h1 {
-    font-size: 58px;
-    line-height: 1.2;
-    font-weight: 300;
-    margin-bottom: 30px;
-    color: var(--text-color);
-    white-space: nowrap;
-}
-
-.about-text p {
-    font-size: 21px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    color: var(--text-color);
 }
 
 .about-text .birth {
@@ -57,20 +34,6 @@ body {
     object-fit: cover;
 }
 
-.angels-decoration {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-}
-
-.angels-decoration img {
-    width: 100%;
-    height: auto;
-    opacity: 0.8;
-}
-
 /* Средние экраны (планшеты) */
 @media (max-width: 1024px) {
     .about-main {
@@ -88,10 +51,6 @@ body {
     .author-photo {
         width: 350px;
         margin-top: -30px;
-    }
-
-    .angels-decoration {
-        width: 250px;
     }
 
     .author-photo img {

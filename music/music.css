@@ -73,17 +73,12 @@ body {
 
 .text-block h1 {
     font-family: 'Times New Roman', serif;
-    font-size: 36px; /* Уменьшили с 42px до 36px */
     margin: 0 0 20px 0;
-    color: var(--text-color);
 }
 
 .text-block p {
     font-family: 'Times New Roman', serif;
-    font-size: 18px; /* Уменьшили с 21px до 18px */
-    line-height: 1.4;
     margin: 0;
-    color: var(--text-color);
 }
 
 .image-block img {

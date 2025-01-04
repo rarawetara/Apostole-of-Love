@@ -217,3 +217,66 @@ main {
     }
 }
 
+/* Общие стили для типографики */
+h1 {
+    font-size: 3.75rem; /* 60px в rem */
+    line-height: 1.2;
+    color: var(--text-color);
+}
+
+p {
+    font-size: 1.125rem; /* 18px в rem */
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+/* Медиа-запрос для адаптивности */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* 40px для мобильных */
+    }
+    
+    p {
+        font-size: 1rem; /* 16px для мобильных */
+    }
+}
+
+/* Общие компоненты */
+.angels-decoration {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    z-index: 100;
+}
+
+.angels-decoration img {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+    margin-bottom: 60px;
+}
+
+/* Общие стили для main секций */
+.page-main {
+    padding: 120px 60px 50px 60px;
+    position: relative;
+    min-height: 100vh;
+    overflow: visible;
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+    .page-main {
+        padding: 20px;
+    }
+    
+    .angels-decoration {
+        width: 200px;
+    }
+    
+    .angels-decoration img {
+        margin-bottom: 30px;
+    }
+}
+

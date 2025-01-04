@@ -1,22 +1,3 @@
-.listen-main {
-    padding: 30px 60px 50px 60px;
-    position: relative;
-    overflow: visible;
-}
-
-h1 {
-    font-size: 58px;
-    line-height: 1.2;
-    text-align: left;
-    font-weight: 300;
-    margin-bottom: 60px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 40px;
-    color: var(--text-color);
-}
-
 .content-wrapper {
     display: flex;
     justify-content: flex-start;
@@ -72,26 +53,8 @@ h1 {
 }
 
 .description p {
-    font-size: 21px;
-    line-height: 1.5;
     margin-bottom: 20px;
-    color: var(--text-color);
     font-weight: 200;
-}
-
-.angels-decoration {
-    position: absolute;
-    bottom: -123px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-}
-
-.angels-decoration img {
-    width: 100%;
-    height: auto;
-    opacity: 0.8;
-    margin-bottom: 60px;
 }
 
 /* Средние экраны (планшеты) */
@@ -117,19 +80,6 @@ h1 {
 
 /* Маленькие экраны (мобильные) */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 19px;
-        line-height: 1.2;
-        text-align: left;
-        font-weight: 300;
-        /* margin-bottom: 60px; */
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0;
-        color: var(--text-color);
-    }
-
     .platform-link {
         width: 100%;
         margin-bottom: 10px;
@@ -151,9 +101,5 @@ h1 {
     .content-wrapper {
         gap: 30px;
         padding: 0;
-    }
-
-    .listen-main {
-        padding: 20px;
     }
 }
