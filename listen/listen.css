@@ -79,20 +79,18 @@
 }
 
 .platforms-list {
-    display: flex
-;
+    display: flex;
     flex-direction: column;
-    /* gap: 15px; */
+    gap: 20px; /* Добавляем отступ между элементами */
     max-width: 600px;
     margin: 0 auto;
-    /* padding: 20px; */
 }
 
 .platform-link {
     display: flex;
     align-items: center;
-    padding: 20px 30px; /* Увеличиваем отступы для больших экранов */
-    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 25px;
+    background-color: #C07777;
     border-radius: 30px;
     text-decoration: none;
     color: #333;
@@ -101,26 +99,25 @@
 }
 
 .platform-link img {
-    width: 30px; /* Увеличиваем размер иконок */
-    height: 30px;
-    margin-right: 20px;
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
 }
 
 .platform-link span {
-    font-size: 1.4375rem; /* 23px в rem */
+    font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: 1px;
 }
 
 .play-button {
     position: absolute;
-    right: 30px;
+    right: 25px;
     opacity: 0.7;
 }
 
 /* Эффекты при наведении */
 .platform-link:hover {
-    background-color: #C07777;
     transform: scale(1.02);
 }
 
@@ -135,16 +132,16 @@
     }
 
     .platform-link {
-        padding: 25px 35px; /* Еще больше увеличиваем отступы */
+        padding: 20px 30px;
     }
 
     .platform-link img {
-        width: 36px; /* Еще больше увеличиваем размер иконок */
-        height: 36px;
+        width: 30px;
+        height: 30px;
     }
 
     .platform-link span {
-        font-size: 18px; /* Еще больше увеличиваем размер шрифта */
+        font-size: 16px;
     }
 }
 
