@@ -152,11 +152,12 @@
     gap: 40px; /* Расстояние между колонками */
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0px 40px 30px 40px;
+    padding: 40px 40px 30px 40px; /* Добавляем отступ сверху */
 }
 
 .platforms-list {
     flex: 1; /* Список ссылок занимает 1 часть */
+    margin-top: 30px; /* Добавляем дополнительный отступ сверху для списка */
 }
 
 .description {
@@ -258,5 +259,63 @@
     .platform-link span {
         font-size: 1rem;
         margin-right: 30px;
+    }
+}
+
+/* Стили логотипа из listen.css - временно отключены
+.logo {
+    position: absolute;
+    left: 40px;
+    margin: 0;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover img {
+    transform: scale(1.05);
+}
+*/
+
+.main-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        gap: 20px;
+    }
+
+    .logo {
+        left: 20px;
+    }
+    
+    .logo img {
+        width: 100px;
+    }
+
+    .main-nav ul {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 80px;
     }
 }

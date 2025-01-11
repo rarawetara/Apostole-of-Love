@@ -48,45 +48,61 @@ header {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    left: 40px;
+    margin: 0;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo a:hover img {
+    transform: scale(1.05);
+}
+
+/* Адаптив для лого */
+@media (max-width: 768px) {
+    .logo {
+        left: 20px;
+    }
+    
+    .logo img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 80px;
+    }
 }
 
 /* Стили навигации */
 .main-nav {
-    white-space: nowrap;
-    margin: 0;
-    padding: 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .main-nav ul {
     display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    gap: 1.5625rem;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-.main-nav ul.all-active {
-    background-color: var(--primary-color);
-    border-radius: var(--border-radius-large);
-    border-bottom: var(--border-bottom);
-
-    display: flex;
-    gap: 20px;
-}
-
-.main-nav li {
-    margin: 0;
-    padding: 0;
 }
 
 .main-nav a {
     text-decoration: none;
     color: var(--text-color);
-    padding: 0.5rem 1.5625rem !important;
-    display: inline-block;
     white-space: nowrap;
     font-size: 1.25rem;
     line-height: 1.2;
@@ -101,6 +117,32 @@ header {
     padding: 0.5rem 1rem !important;
 }
 
+/* Адаптив */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        gap: 20px;
+    }
+
+    .main-nav ul {
+        gap: 20px;
+    }
+    
+    .main-nav a {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav ul {
+        gap: 10px;
+    }
+    
+    .main-nav a {
+        font-size: 0.5rem;
+    }
+}
+
 /* Стили для языкового селектора */
 .language-selector {
     position: relative;
@@ -108,6 +150,7 @@ header {
     padding: 0.9375rem 1.875rem;
     border-radius: var(--border-radius-small);
     text-align: center;
+    margin: 1vw;
 }
 
 .current-lang {
