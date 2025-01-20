@@ -3,3 +3,44 @@ h1 {
     line-height: 1.2; /* Установите желаемый межстрочный интервал */
     color: var(--text-color); /* Убедитесь, что цвет текста одинаковый */
 }
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.price-btn,
+.buy-btn,
+.listen-btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #DEB887; /* цвет как на изображении */
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.price-btn:hover,
+.buy-btn:hover,
+.listen-btn:hover {
+    transform: scale(1.05);
+    background-color: #D2691E;
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .price-btn,
+    .buy-btn,
+    .listen-btn {
+        width: 200px;
+    }
+}

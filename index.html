@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <div class="preloader">
+      <video id="preloader-video" muted playsinline autoplay>
+          <source src="main/images/preloud.webm" type="video/webm">
+      </video>
+      <div class="main-content" style="display: none;">
+    </div>
+  </div>
+  
     <header>
       <div class="logo">
         <a href="index.html">
@@ -16,62 +24,86 @@
       </div>
       <nav class="main-nav">
         <ul>
-          <li><a href="about/about.html">ABOUT AUTHOR</a></li>
-          <li><a href="listen/listen.html">LISTEN</a></li>
-          <li><a href="buy/buy.html">BUY</a></li>
-          <li><a href="music/music.html">ABOUT MUSIC</a></li>
+          <li>
+            <a href="about/about.html" data-translate="about" data-section="nav"
+              >ABOUT AUTHOR</a
+            >
+          </li>
+          <li>
+            <a
+              href="listen/listen.html"
+              data-translate="listen"
+              data-section="nav"
+              >LISTEN</a
+            >
+          </li>
+          <li>
+            <a href="buy/buy.html" data-translate="buy" data-section="nav"
+              >BUY</a
+            >
+          </li>
+          <li>
+            <a href="music/music.html" data-translate="music" data-section="nav"
+              >ABOUT MUSIC</a
+            >
+          </li>
         </ul>
       </nav>
-      <div class="cart-icon">CART</div>
+      <div class="cart-icon" data-translate="cart" data-section="nav">CART</div>
       <div class="language-selector">
-        <div class="current-lang">LANGUAGE</div>
+        <div class="current-lang" data-translate="language" data-section="nav">
+          LANGUAGE
+        </div>
         <div class="lang-options">
-          <div>ENGLISH</div>
-          <div>UKRAINIAN</div>
-          <div>GERMAN</div>
-          <div>SPANISH</div>
+          <div data-lang="uk">UKRAINIAN</div>
+          <div data-lang="de">GERMAN</div>
+          <div data-lang="es">SPANISH</div>
         </div>
       </div>
     </header>
 
-    <main class="index-main">
-      <div class="angels-container">
-        <img src="main/images/angels.png" alt="Angels" class="angels-image" />
-      </div>
+        <main class="index-main">
+          <div class="angels-container">
+            <img src="main/images/angels.png" alt="Angels" class="angels-image" />
+          </div>
 
-      <div class="welcome-container">
-        <h1>WELCOME TO<br />ANATOLII DOLESKO WORLD</h1>
+          <div class="welcome-container">
+            <h1 data-translate="welcome" data-section="index">
+              WELCOME TO<br />ANATOLII DOLESKO WORLD
+            </h1>
 
-        <div class="description">
-          <p>
-            Anatolii Dolesko is a visionary composer whose music transcends
-            boundaries and resonates deeply with audiences worldwide.
-          </p>
+            <div class="description">
+              <p data-translate="description-1" data-section="index">
+                Anatolii Dolesko is a visionary composer whose music transcends
+                boundaries and resonates deeply with audiences worldwide.
+              </p>
 
-          <p>
-            His compositions weave intricate melodies, blending classical
-            traditions with modern innovations to create truly unique
-            soundscapes.
-          </p>
+              <p data-translate="description-2" data-section="index">
+                His compositions weave intricate melodies, blending classical
+                traditions with modern innovations to create truly unique
+                soundscapes.
+              </p>
 
-          <p>
-            Join Anatolii on his musical journey by following him on social
-            media. Get behind-the-scenes updates, exclusive content, and a
-            closer look at his creative process.
-          </p>
+              <p data-translate="description-3" data-section="index">
+                Join Anatolii on his musical journey by following him on social
+                media. Get behind-the-scenes updates, exclusive content, and a
+                closer look at his creative process.
+              </p>
 
-          <p>
-            Let the music of Anatolii Dolesko inspire you. Explore his world,
-            and immerse yourself in the artistry of one of today's most
-            compelling composers.
-          </p>
-        </div>
-      </div>
+              <p data-translate="description-4" data-section="index">
+                Let the music of Anatolii Dolesko inspire you. Explore his world,
+                and immerse yourself in the artistry of one of today's most
+                compelling composers.
+              </p>
+            </div>
+          </div>
 
-      <div class="columns-container">
-        <img src="main/images/index.png" alt="Columns" class="columns-image" />
-      </div>
-    </main>
+          <div class="columns-container">
+            <img src="main/images/index.png" alt="Columns" class="columns-image" />
+          </div>
+        </main>
+    </div>
+    <script src="main/scripts/translations.js"></script>
     <script src="main/scripts/main.js"></script>
   </body>
 </html>

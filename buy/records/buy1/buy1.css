@@ -71,18 +71,18 @@
     align-items: center;
 }
 
-.buy-button, .listen-button {
+.buy-button, .listen-button, .price-button {
     padding: 15px 60px;
     font-size: 18px;
     border: none;
     border-radius: 25px;
-    background-color: #DEB887;
+    background-color: #E9AC7A;
     color: var(--text-color);
     cursor: pointer;
     transition: opacity 0.3s ease;
 }
 
-.buy-button:hover, .listen-button:hover {
+.buy-button:hover, .listen-button:hover, .price-button:hover {
     opacity: 0.8;
 }
 
@@ -92,20 +92,6 @@
     margin-top: 40px;
 }
 
-.price-button {
-    padding: 15px 60px;
-    font-size: 18px;
-    border: none;
-    border-radius: 25px;
-    background-color: #DEB887;
-    color: var(--text-color);
-    cursor: pointer;
-    margin-right: auto;
-}
-
-.price-button:hover {
-    opacity: 0.8;
-}
 /* Стили для планшетов */
 @media (max-width: 1024px) {
     .album-description {
@@ -164,7 +150,7 @@
         margin-top: 20px;
     }
 
-    .buy-button, .listen-button {
+    .buy-button, .listen-button, .price-button {
         padding: 10px 30px;
         font-size: 16px;
     }
