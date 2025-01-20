@@ -152,6 +152,11 @@ header {
     white-space: nowrap;
     font-size: 1.25rem;
     line-height: 1.2;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-variation-settings: "wdth" 100;
 }
 
 .main-nav .active-page {
@@ -161,6 +166,13 @@ header {
     display: inline-block;
     color: var(--text-color);
     padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius-large);
+    border-bottom: var(--border-bottom);
 }
 
 /* Адаптив */
