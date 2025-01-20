@@ -80,12 +80,12 @@ body {
 
 /* Стили заголовка и текста */
 .text-block h1 {
-    font-family: 'Times New Roman', serif;
+
     margin: 0 0 20px 0;
 }
 
 .text-block p {
-    font-family: 'Times New Roman', serif;
+
     margin: 0;
 }
 

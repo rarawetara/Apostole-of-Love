@@ -1,4 +1,11 @@
-/* Эти стили в начале файла могут влиять */
+@font-face {
+    font-family: 'Bergamasco';
+    src: url('font/Bergamasco-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 main {
     position: relative;
     overflow: hidden;
@@ -13,7 +20,7 @@ main {
 .columns-container {
     position: absolute;
     top: 150px;
-    left:-1%;
+    left: -1%;
     width: 10%;
     height: 100vh;
 }
@@ -38,6 +45,7 @@ main {
     object-fit: contain;
 }
 
+/* Применение шрифта к h1 */
 .welcome-container {
     position: absolute;
     top: 40%;
@@ -45,7 +53,6 @@ main {
     transform: translate(-50%, -50%);
     z-index: 2;
     width: 100%;
-
 }
 
 .welcome-container h1 {
@@ -55,17 +62,16 @@ main {
     font-weight: 300;
     letter-spacing: 1px;
     padding-bottom: 5vw;
+    font-family: 'Bergamasco', sans-serif; /* Применение шрифта */
 }
 
 .description {
     position: absolute;
     right: 340px;
     top: 12vw;
-
     max-width: 85vh;
     text-align: left;
     z-index: 2;
-
 }
 
 .description p {
@@ -77,6 +83,7 @@ main {
     letter-spacing: 0.2px;
 }
 
+/* Медиа-запросы */
 @media (max-width: 1024px) {
     .columns-container {
         position: relative;

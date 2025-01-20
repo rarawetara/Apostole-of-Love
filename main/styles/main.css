@@ -1,4 +1,10 @@
-:root {
+@font-face {
+    font-family: 'Bergamasco';
+    src: url('../../font/Bergamasco-Light.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}:root {
     /* Цветовая палитра */
     --background-color: #FFF5EB;
     --primary-color: #E9AC7A;
@@ -16,6 +22,8 @@
     --header-padding: 2rem 5vw;
 }
 
+
+
 /* Базовые стили */
 * {
     margin: 0;
@@ -23,9 +31,25 @@
     box-sizing: border-box;
 }
 
+/* Общие стили для типографики - перемещаем сюда и делаем более специфичными */
+h1, 
+.page-main h1,
+.index-main h1,
+main h1,
+.dl-gdocs-top-icon,
+.dl-gdocs-top-icon-modal,
+.dl-gslides-icon {
+    font-family: 'Bergamasco', sans-serif !important;
+    font-weight: 200;
+    font-size: 3.75rem;
+    line-height: 1.2;
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body {
     background-color: var(--background-color);
-    font-family: 'Times New Roman', serif;
     color: var(--text-color);
     padding-top: 5rem;
 }
@@ -259,19 +283,6 @@ main {
     }
 }
 
-/* Общие стили для типографики */
-h1 {
-    font-size: 3.75rem; /* 60px в rem */
-    line-height: 1.2;
-    color: var(--text-color);
-}
-
-p {
-    font-size: 1.4375rem; /* 23px в rem */
-    line-height: 1.5;
-    color: var(--text-color);
-}
-
 /* Медиа-запрос для адаптивности */
 @media (max-width: 768px) {
     h1 {
@@ -401,5 +412,12 @@ p {
 
 .preloader.hidden {
     display: none;
+}
+
+/* Общие стили для типографики */
+p {
+    font-size: 1.4375rem;
+    line-height: 1.5;
+    color: var(--text-color);
 }
 

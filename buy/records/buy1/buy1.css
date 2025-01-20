@@ -5,7 +5,6 @@
     padding: 10px 20px;
     color: var(--text-color);
     text-decoration: none;
-    font-family: 'Times New Roman', serif;
     transition: opacity 0.3s ease;
     z-index: 100;
 }
@@ -22,7 +21,6 @@
 .album-title {
     font-size: 48px;
     margin-bottom: 0;
-    font-family: 'Times New Roman', serif;
 }
 
 .part-number {
