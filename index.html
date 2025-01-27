@@ -5,9 +5,11 @@
     <!-- Важно: мета-тег адаптива -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anatolii Dolesko World</title>
-    <!-- Стили -->
+    <!-- Подключаем общий main.css (если нужно) -->
+    <!-- <link rel="stylesheet" href="main/styles/main.css" /> -->
+
+    <!-- Подключаем index.css (исправленный) -->
     <link rel="stylesheet" href="main/styles/main.css" />
-    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <!-- Прелоадер -->
@@ -15,33 +17,56 @@
       <video id="preloader-video" muted playsinline autoplay>
         <source src="main/images/preloud.webm" type="video/webm" />
       </video>
-      <div class="main-content" style="display: none;"></div>
+      <div class="main-content" style="display: none"></div>
     </div>
 
     <!-- Шапка (header) -->
     <header>
       <div class="logo">
         <a href="index.html">
-          <img src="main/images/logo.png" alt="Logo" class="logo" />
+          <img src="main/images/logo.png" alt="Logo" />
         </a>
       </div>
+
       <nav class="main-nav">
         <ul>
           <li>
-            <a href="about/about.html" data-translate="about" data-section="nav">ABOUT AUTHOR</a>
+            <a
+              href="about/about.html"
+              data-translate="about"
+              data-section="nav"
+              >ABOUT AUTHOR</a
+            >
           </li>
           <li>
-            <a href="listen/listen.html" data-translate="listen" data-section="nav">LISTEN</a>
+            <a
+              href="listen/listen.html"
+              data-translate="listen"
+              data-section="nav"
+              >LISTEN</a
+            >
           </li>
           <li>
-            <a href="buy/buy.html" data-translate="buy" data-section="nav">BUY</a>
+            <a
+              href="buy/buy.html"
+              data-translate="buy"
+              data-section="nav"
+              >BUY</a
+            >
           </li>
           <li>
-            <a href="music/music.html" data-translate="music" data-section="nav">ABOUT MUSIC</a>
+            <a
+              href="music/music.html"
+              data-translate="music"
+              data-section="nav"
+              >ABOUT MUSIC</a
+            >
           </li>
         </ul>
       </nav>
+
       <div class="cart-icon" data-translate="cart" data-section="nav">CART</div>
+
       <div class="language-selector">
         <div class="current-lang" data-translate="language" data-section="nav">
           LANGUAGE
@@ -55,48 +80,46 @@
     </header>
 
     <!-- Основной контент -->
-    <main class="index-main">
-      <!-- Объединила ангелов, приветствие и колонки в общий блок hero, 
-           чтобы на мобильных проще выключить абсолютное позиционирование -->
-      <div class="hero-section">
-        <div class="angels-container">
-          <img src="main/images/angels.png" alt="Angels" class="angels-image" />
-        </div>
-
-        <div class="welcome-container">
-          <h1 data-translate="welcome" data-section="index">
-            WELCOME TO<br />ANATOLII DOLESKO WORLD
-          </h1>
-
-          <div class="description-index">
+    <main class="hero-section index-main">
+      <!-- 1. Блок ангелов (при желании оставляем) -->
+      <div class="angels-block">
+        <img src="main/images/angels.png" alt="Angels" class="angels-image" />
+      </div>
+    
+      <!-- 2. Блок приветствия -->
+      <div class="welcome-block">
+        <h1 data-translate="welcome" data-section="index">
+          WELCOME TO<br />ANATOLII DOLESKO WORLD
+        </h1>
+    
+        <!-- 3. Блок «картинка слева – текст справа» -->
+        <div class="description-block">
+          <div class="image-content">
+            <div class="columns-block">
+              <img
+                src="main/images/index.png"
+                alt="Columns"
+                class="columns-image"
+              />
+            </div>
+          </div>
+          <div class="text-content">
             <p data-translate="description-1" data-section="index">
-              Anatolii Dolesko is a visionary composer whose music transcends
-              boundaries and resonates deeply with audiences worldwide.
+              Anatolii Dolesko is a visionary composer whose music...
             </p>
             <p data-translate="description-2" data-section="index">
-              His compositions weave intricate melodies, blending classical
-              traditions with modern innovations to create truly unique
-              soundscapes.
+              His compositions weave intricate melodies...
             </p>
             <p data-translate="description-3" data-section="index">
-              Join Anatolii on his musical journey by following him on social
-              media. Get behind-the-scenes updates, exclusive content, and a
-              closer look at his creative process.
+              Join Anatolii on his musical journey...
             </p>
             <p data-translate="description-4" data-section="index">
-              Let the music of Anatolii Dolesko inspire you. Explore his world,
-              and immerse yourself in the artistry of one of today's most
-              compelling composers.
+              Let the music of Anatolii Dolesko inspire you...
             </p>
           </div>
         </div>
-
-        <div class="columns-container">
-          <img src="main/images/index.png" alt="Columns" class="columns-image" />
-        </div>
       </div>
     </main>
-
     <!-- Скрипты -->
     <script src="main/scripts/translations.js"></script>
     <script src="main/scripts/main.js"></script>
