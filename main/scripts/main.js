@@ -10,14 +10,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const isHomePage = window.location.pathname === '/' || 
                       window.location.pathname.includes('index.html');
     
-    // Если это не главная страница, скрываем прелоадер
-    if (!isHomePage) {
+    // Проверяем, первый ли это визит
+    const isFirstVisit = !sessionStorage.getItem('hasVisited');
+    
+    // Если это не главная страница или не первый визит, скрываем прелоадер
+    if (!isHomePage || !isFirstVisit) {
         preloader.style.display = 'none';
         mainContent.style.display = 'block';
         return;
     }
 
-    // Воспроизводим видео только на главной странице
+    // Отмечаем, что пользователь уже посетил сайт
+    sessionStorage.setItem('hasVisited', 'true');
+
+    // Воспроизводим видео только на главной странице при первом визите
     preloader.style.display = 'block';
     mainContent.style.display = 'none';
     
