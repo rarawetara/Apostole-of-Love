@@ -96,3 +96,122 @@ document.addEventListener('DOMContentLoaded', function() {
     // Применяем сохраненный язык при загрузке
     updatePageContent(currentLanguage);
 });
+
+// Добавляем обработчик мобильной навигации
+document.addEventListener('DOMContentLoaded', () => {
+    const mainNav = document.querySelector('.main-nav');
+    const navList = mainNav.querySelector('ul');
+
+    function toggleMobileNav(e) {
+        if (window.innerWidth <= 768) { // Для мобильных устройств
+            if (e.target.closest('.main-nav')) {
+                navList.classList.toggle('active');
+            } else {
+                navList.classList.remove('active');
+            }
+        }
+    }
+
+    document.addEventListener('click', toggleMobileNav);
+});
+
+function initializeMobileNav() {
+    const nav = document.querySelector('.main-nav');
+    
+    function toggleNav(e) {
+        // Проверяем, что клик был на самой навигации, а не на ссылках
+        if (e.target.closest('.main-nav') && !e.target.closest('.main-nav a')) {
+            nav.classList.toggle('active');
+        }
+    }
+
+    // Добавляем обработчики для клика и тача
+    nav.addEventListener('click', toggleNav);
+    nav.addEventListener('touchstart', toggleNav);
+
+    // Закрываем меню при клике вне его
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.main-nav')) {
+            nav.classList.remove('active');
+        }
+    });
+
+    // Закрываем меню при клике на ссылку
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+    });
+}
+
+// Вызываем функцию при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    initializeMobileNav();
+});
+
+function initializeTextBlocks() {
+    const textBlocks = document.querySelectorAll('.text-block');
+    
+    textBlocks.forEach(block => {
+        // Добавляем кнопку закрытия
+        const closeButton = document.createElement('button');
+        closeButton.className = 'close-text-block';
+        closeButton.innerHTML = `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        `;
+        block.appendChild(closeButton);
+        closeButton.style.display = 'none';
+
+        // Обработчик клика по блоку
+        block.addEventListener('click', function(e) {
+            if (!block.classList.contains('expanded')) {
+                expandBlock(block);
+            }
+        });
+
+        // Обработчик для кнопки закрытия
+        closeButton.addEventListener('click', function(e) {
+            e.stopPropagation(); // Предотвращаем всплытие события
+            collapseBlock(block);
+        });
+
+        // Обработчик клавиши Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && block.classList.contains('expanded')) {
+                collapseBlock(block);
+            }
+        });
+
+        // Обработчик свайпа вниз для мобильных устройств
+        let touchStartY = 0;
+        block.addEventListener('touchstart', function(e) {
+            touchStartY = e.touches[0].clientY;
+        });
+
+        block.addEventListener('touchmove', function(e) {
+            if (!block.classList.contains('expanded')) return;
+            
+            const touchEndY = e.touches[0].clientY;
+            const diff = touchEndY - touchStartY;
+            
+            if (diff > 100) { // Свайп вниз более 100px
+                collapseBlock(block);
+            }
+        });
+    });
+}
+
+function expandBlock(block) {
+    block.classList.add('expanded');
+    block.querySelector('.close-text-block').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function collapseBlock(block) {
+    block.classList.remove('expanded');
+    block.querySelector('.close-text-block').style.display = 'none';
+    document.body.style.overflow = '';
+}

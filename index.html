@@ -10,6 +10,7 @@
 
     <!-- Подключаем index.css (исправленный) -->
     <link rel="stylesheet" href="main/styles/main.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <!-- Прелоадер -->
@@ -31,67 +32,43 @@
       <nav class="main-nav">
         <ul>
           <li>
-            <a
-              href="about/about.html"
-              data-translate="about"
-              data-section="nav"
-              >ABOUT AUTHOR</a
-            >
+            <a href="about/about.html">ABOUT AUTHOR</a>
           </li>
           <li>
-            <a
-              href="listen/listen.html"
-              data-translate="listen"
-              data-section="nav"
-              >LISTEN</a
-            >
+            <a href="listen/listen.html">LISTEN</a>
           </li>
           <li>
-            <a
-              href="buy/buy.html"
-              data-translate="buy"
-              data-section="nav"
-              >BUY</a
-            >
+            <a href="buy/buy.html">BUY</a>
           </li>
           <li>
-            <a
-              href="music/music.html"
-              data-translate="music"
-              data-section="nav"
-              >ABOUT MUSIC</a
-            >
+            <a href="music/music.html">ABOUT MUSIC</a>
           </li>
         </ul>
       </nav>
 
-      <div class="cart-icon" data-translate="cart" data-section="nav">CART</div>
+      <div class="cart-icon">CART</div>
 
       <div class="language-selector">
-        <div class="current-lang" data-translate="language" data-section="nav">
-          LANGUAGE
-        </div>
+        <div class="current-lang">LANGUAGE</div>
         <div class="lang-options">
-          <div data-lang="uk">UKRAINIAN</div>
-          <div data-lang="de">GERMAN</div>
-          <div data-lang="es">SPANISH</div>
+          <div>UKRAINIAN</div>
+          <div>GERMAN</div>
+          <div>SPANISH</div>
         </div>
       </div>
     </header>
 
     <!-- Основной контент -->
     <main class="hero-section index-main">
-      <!-- 1. Блок ангелов (при желании оставляем) -->
+      <!-- 1. Блок ангелов -->
       <div class="angels-block">
         <img src="main/images/angels.png" alt="Angels" class="angels-image" />
       </div>
-    
+
       <!-- 2. Блок приветствия -->
       <div class="welcome-block">
-        <h1 data-translate="welcome" data-section="index">
-          WELCOME TO<br />ANATOLII DOLESKO WORLD
-        </h1>
-    
+        <h1>WELCOME TO<br />ANATOLII DOLESKO WORLD</h1>
+
         <!-- 3. Блок «картинка слева – текст справа» -->
         <div class="description-block">
           <div class="image-content">
@@ -104,24 +81,34 @@
             </div>
           </div>
           <div class="text-content">
-            <p data-translate="description-1" data-section="index">
-              Anatolii Dolesko is a visionary composer whose music...
-            </p>
-            <p data-translate="description-2" data-section="index">
-              His compositions weave intricate melodies...
-            </p>
-            <p data-translate="description-3" data-section="index">
-              Join Anatolii on his musical journey...
-            </p>
-            <p data-translate="description-4" data-section="index">
-              Let the music of Anatolii Dolesko inspire you...
-            </p>
+            <div class="text-block">
+
+              <p>
+                Anatolii Dolesko is a visionary composer whose music transcends
+                boundaries and resonates deeply with audiences worldwide.
+                
+              </p>
+              <p>
+                His compositions weave intricate melodies, blending classical
+                traditions with modern innovations to create truly unique
+                soundscapes.
+              </p>
+              <p>
+                Join Anatolii on his musical journey by following him on social
+                media. Get behind-the-scenes updates, exclusive content, and a
+                closer look at his creative process.
+              </p>
+              <p>
+                Let the music of Anatolii Dolesko inspire you. Explore his world,
+                and immerse yourself in the artistry of one of today's most
+                compelling composers.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </main>
     <!-- Скрипты -->
-    <script src="main/scripts/translations.js"></script>
     <script src="main/scripts/main.js"></script>
   </body>
 </html>

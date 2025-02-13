@@ -29,10 +29,10 @@
 
     /* Границы и закругления */
     --border-bottom: 0.3125rem solid var(--border-color);
-    --border-radius-large: 2.5rem;  
-    --border-radius-small: 1.25rem; 
+    --border-radius-large: 2.5rem;
+    --border-radius-small: 1.25rem;
     --border-radius-bottom: 6.25rem;
-    --header-padding: 2rem 5vw; 
+    --header-padding: 2rem 5vw;
 }
 
 /* =============================
@@ -79,8 +79,8 @@ main h1,
 }
 
 p {
-    font-size: 1.3rem;   
-    line-height: 1.4;    
+    font-size: 1rem;
+    line-height: 1.4;
     font-weight: 300;
     font-variation-settings: "wdth" 100;
     color: var(--text-color);
@@ -92,20 +92,22 @@ p {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0;
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 5rem; 
+    height: 5rem;
     max-height: 5rem;
     padding: var(--header-padding);
     background-color: var(--background-color);
     z-index: 1000;
+    font-family: "Bergamasco", sans-serif;
 }
 
 .logo {
-    left: 2.5rem; 
+    left: 2.5rem;
     margin: 0;
 }
 .logo a {
@@ -118,7 +120,7 @@ header {
     color: var(--accent-color);
 }
 .logo img {
-    width: 7.5rem;
+    width: 5.5rem;
     height: auto;
     transition: transform 0.3s ease;
 }
@@ -134,8 +136,8 @@ header {
 }
 .main-nav ul {
     display: flex;
-    gap: 2.5rem; 
-    margin: 0; 
+    gap: 2.5rem;
+    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -144,12 +146,12 @@ header {
     text-decoration: none;
     color: var(--text-color);
     white-space: nowrap;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 1.2;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.2rem;
     transition: all 0.3s ease;
-    font-family: "Roboto", sans-serif; 
-    font-weight: 500;
+    font-family: "Bergamasco", sans-serif;
+    font-weight:900;
     font-variation-settings: "wdth" 100;
 }
 .main-nav .active-page {
@@ -172,12 +174,13 @@ header {
 .language-selector {
     position: relative;
     background-color: var(--primary-color);
-    padding: 0.9375rem 1.875rem;
+    padding: 0.9375rem 1rem;
+    
     border-radius: var(--border-radius-small);
     text-align: center;
     margin: 1vw;
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 600;
     font-variation-settings: "wdth" 100;
 }
 .current-lang {
@@ -187,7 +190,8 @@ header {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     background-color: var(--primary-color);
     border-radius: 0 0 var(--border-radius-bottom) var(--border-radius-bottom);
     padding-bottom: 1.25rem;
@@ -195,7 +199,7 @@ header {
     text-align: center;
 }
 .lang-options div {
-    padding: 0.625rem 1.5625rem;
+    padding: 0.625rem 1rem;
     cursor: pointer;
 }
 .language-selector:hover .lang-options {
@@ -210,7 +214,7 @@ header {
    ============================= */
 main {
     position: relative;
-    padding-top: 5rem; 
+    padding-top: 5rem;
     margin: 0;
     overflow: hidden;
     min-height: calc(100vh - 5rem);
@@ -226,9 +230,10 @@ main {
 
 .page-main {
     position: relative;
-    padding: 0 3.75rem 3.125rem;
     min-height: 100vh;
     overflow: visible;
+    padding: 2rem;
+
 }
 
 /* Общие декорации */
@@ -236,7 +241,7 @@ main {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 18.75rem; 
+    width: 18.75rem;
     z-index: 100;
 }
 .angels-decoration img {
@@ -249,7 +254,8 @@ main {
 /* Прелоадер */
 .preloader {
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -276,15 +282,14 @@ main {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding:1rem;
+    padding: 1rem;
     position: relative;
 }
 
-  
 /* Блок ангелов */
 .angels-block {
     width: 100%;
-    max-width: 18rem;
+    max-width: 20rem; /* Изменено для согласованности */
     margin: 0 auto;
     text-align: center;
 }
@@ -292,13 +297,13 @@ main {
     width: 100%;
     height: auto;
 }
-  
+
 /* Блок приветствия */
 .welcome-block {
     width: 100%;
     max-width: 75rem;
     text-align: center;
-    margin: 2rem auto;
+    margin: -3rem auto;
     padding: 0 1rem;
     position: relative;
     z-index: 3;
@@ -314,19 +319,17 @@ main {
 }
 
 .description-block {
-    display: flex
-;
+    display: flex;
     gap: 2rem;
     align-items: center;
-    margin-top: 2rem;
-    padding-left: 16vw;
+    margin-top: -10rem;
     position: relative;
-    justify-content: center;
+    justify-content: end;
 }
 .image-content {
     position: absolute;
     z-index: 1;
-    left: -5%;
+    left: -45%;
     top: 45%;
     transform: translateY(-50%);
     opacity: 0.9;
@@ -336,23 +339,25 @@ main {
     overflow: hidden;
 }
 .columns-image {
+    content: url('../../main/images/index_big.png');
     width: 100%;
     height: auto;
-    max-width: 100%;
-    margin-left: 0vw;
+    max-width: none;
+    padding-bottom: 4rem;
+    
 }
 
-/* Текст */
 .description-block .text-content {
     position: relative;
     z-index: 3;
     flex: 1 1 50%;
-    max-width: 45rem;
+    max-width: fit-content;
     text-align: justify;
-    padding-right: 2rem;
-    padding-top: 15rem;
-    margin-left: 13vw;
+    padding-top: 10rem;
+    padding-left: 38%;
 }
+
+
 .description-block .text-content p {
     font-size: 1rem;
     line-height: 1.6;
@@ -381,7 +386,7 @@ main {
 .author-photo {
     align-self: flex-end;
     width: 28.125rem;
-    margin-top: -3.125rem; 
+    margin-top: -3.125rem;
 }
 .author-photo img {
     width: 100%;
@@ -407,7 +412,7 @@ main {
     align-items: center;
 }
 
-/* Ховер */
+/* Ховер для изображений */
 .image-container,
 .main-image {
     width: 100%;
@@ -440,33 +445,48 @@ main {
     margin: 0 auto;
 }
 .platform-link {
+    height: 5vh;
     display: flex;
     align-items: center;
-    padding: 0.9375rem 1.5625rem;
+    justify-content: flex-start;
+    padding:2rem 2rem;
     background-color: #C07777;
     border-radius: 1.875rem;
     text-decoration: none;
     color: #333;
     transition: all 0.3s ease;
     position: relative;
+    gap: 0.9375rem;
+    box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.15);
 }
 .platform-link img {
     width: 1.5625rem;
     height: 1.5625rem;
-    margin-right: 0.9375rem;
+    flex-shrink: 0;
 }
 .platform-link span {
     font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: 0.0625rem;
+    flex-grow: 1;
+    text-align: center;
+    padding-right: 2.5rem;
 }
 .play-button {
     position: absolute;
     right: 1.5625rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url('../images/play.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
 .platform-link:hover {
     transform: scale(1.02);
+    box-shadow: 0.375rem 0.375rem 0.75rem rgba(0, 0, 0, 0.2);
 }
 .platform-link:hover .play-button {
     opacity: 1;
@@ -494,7 +514,7 @@ main {
 /* =============================
    12. BUY
    ============================= */
-.back-button {
+   .back-button {
     position: fixed;
     bottom: 2.5rem;
     right: 2.5rem;
@@ -551,8 +571,8 @@ main {
     display: flex;
     gap: 1.25rem;
     margin-top: 2.5rem;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content:end;
+    align-items: unset;
 }
 .buy-button, 
 .listen-button, 
@@ -624,49 +644,156 @@ main {
     flex-direction: column;
     align-items: center;
 }
-
 /* =============================
    13. MUSIC
    ============================= */
 .music-grid {
-    padding: 0rem 0rem 0rem;
+    margin: 1rem;
 }
 .grid-container {
     display: flex;
     flex-direction: column;
     gap: 0.9375rem;
-    max-width: 62.5rem;
+
     margin: 0 auto;
 }
 
+/* Общие стили для text-block */
 .text-block {
-    background-color: #C07777;
+    position: relative;
     border-radius: 1.25rem;
     padding: 1.25rem;
-    box-shadow: 0.1875rem 0.1875rem 0.375rem rgba(0,0,0,0.2);
     height: 20.3125rem;
     width: 40.625rem;
     transition: all 0.3s ease;
-    overflow: hidden;
-    position: relative;
     cursor: pointer;
+    overflow: hidden;
+
+    
 }
+
+/* Развернутое состояние */
 .text-block.expanded {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90vw;
-    height: 90vh;
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
     z-index: 1000;
-    padding: 2.5rem;
+    background-color: #C07777;
     display: flex;
-    gap: 2.5rem;
+    gap: 3rem;
+    padding: 4rem;
+    border-radius: 0;
+    box-shadow: none;
+    animation: expandBlock 0.3s ease-out forwards;
+    overflow-y: auto;
 }
+.text-block.expanded .expanded-image {
+    width: 140%;
+    padding: 12rem;
+}
+/* Кнопка закрытия */
+.close-button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* По умолчанию скрыта */
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #2F2F2F;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+/* Показываем кнопку только в развернутом состоянии */
+.text-block.expanded .close-button {
+    display: flex;
+}
+
+.close-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Анимация открытия */
+@keyframes expandBlock {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Стили контента в развернутом состоянии */
+.text-block.expanded .text-content {
+    padding: 2rem;
+    overflow-y: auto;
+    max-height: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1);
+}
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для text-block на главной странице */
+.index-main .text-block {
+    height: auto;
+    overflow: visible;
+}
+
+/* Стили для text-block на странице About Music */
+.music-grid .text-block {
+    background-color: #C07777;
+    height: 20.3125rem;
+
+}
+
+/* Остальные стили для text-block остаются без изменений */
+.text-block.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    /* padding: 2.5rem; */
+    display: flex
+;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
 .text-content {
     height: 100%;
     overflow: hidden;
     transition: all 0.3s ease;
+
 }
 .additional-text {
     opacity: 0;
@@ -690,19 +817,17 @@ main {
     justify-content: center;
 }
 .text-block h1 {
-    margin: 0 0 1.25rem 0;
+    margin: 7rem 0rem 4rem 1rem;
 }
 .text-block p {
     margin: 0;
 }
 /* При развёртывании */
 .text-block.expanded .text-content {
-    width: 60%;
+    width: 45%;
 }
 .text-block.expanded .expanded-image {
     display: block;
-    width: 40%;
-    height: auto;
     object-fit: contain;
     order: 1;
     opacity: 1;
@@ -724,61 +849,122 @@ main {
     opacity: 1;
 }
 
-/* Переопределение grid-container (music.css) */
-.grid-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.9375rem;
-}
+/* Переопределение для вложенных элементов grid-container */
 .grid-container > div {
     display: flex;
     gap: 0.9375rem;
+    justify-content: center;
 }
+  
 
 /* =============================
    14. Адаптивные стили (media)
    ============================= */
 
-/* ---------- max-width: 1200px (75rem) ---------- */
-@media (max-width: 75rem) {
+/* =========================================
+   (1) Очень большие экраны
+   (min-width: 120rem) => ~1920px
+   ========================================= */
+   @media (min-width: 120rem) {
+    .music-grid {
+        padding: 10rem;
+    }
+    .about-content {
+        margin-top: 0;
+    }
     .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2.5rem 1.875rem;
+        max-width: 100rem;
+        padding-bottom: 0vw;
     }
-    .description-block {
-        position: static;
-        flex-direction: column;
-        margin-top: 2rem;
-        align-items: center;
-        padding: 0 2rem;
+    .description {
+        padding: 0rem;
     }
-
-    .description-block > .text-content {
-        order: 1;
-        padding-left: 0;
-        padding-top: 0;
-        padding-right: 0;
-        max-width: 100%;
-        margin-left: 2vw !important;
+    .action-buttons {
+        justify-content: flex-end;
     }
-    .image-content {
-        position: static;
-        order: 2;
-        left: auto;
-        top: auto;
-        transform: none;
-        width: 114%;
-        margin: -5rem -20%;
-        display: block;
+    .price-button,
+    .buy-button,
+    .listen-button {
+        box-shadow: 0.1875rem 0.1875rem 0.375rem rgba(0, 0, 0, 0.2);
     }
+    /* Типографика для больших экранов */
+    h1,
+    .page-main h1,
+    .index-main h1,
+    main h1 {
+        font-size: 4.5rem; /* Увеличено с 3.75rem */
+        line-height: 1.2;
+    }
+    h3,
+    .product-item h3 {
+        font-size: 1.5rem; /* Увеличено с 1.125rem */
+        line-height: 1.3;
+    }
+    p {
+        font-size: 1.25rem; /* Увеличено с 1rem */
+        line-height: 1.6;
+    }
+    .main-image {
+        width: max-content;
+        height: auto;
+    }
+text-block.expanded .expanded-image {
+    display: block;
+    opacity: 1;
+    width: 64%;
+    margin: 14rem;
 }
 
-/* ---------- max-width: 1024px (64rem) ---------- */
-@media (max-width: 64rem) {
-    .hero-section {
+
+}
+
+/* =========================================
+   (2) Большие планшеты / маленькие ноутбуки
+   (max-width: 80rem) => ~1280px
+   ========================================= */
+   @media (max-width: 85rem) {
+    /* Увеличиваем шрифт в меню */
+    .main-nav a {
+        font-size: 1.3rem;
+        padding: 0.5rem 1rem;
+    }
+
+
+}
+@media (max-width: 75rem) {
+    /* Увеличиваем шрифт в меню */
+    .main-nav a {
+        font-size: 1.1rem;
+        padding: 0.5rem 0rem;
+    }
+    .text-block.expanded .expanded-image {
+        width: 140%;
         padding: 0rem;
     }
 
+}
+@media (max-width: 64rem) { 
+    .main-nav {
+        flex: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .text-block.expanded .expanded-image {
+        width: 140%;
+        padding: 0rem;
+    }
+
+
+}
+/* =========================================
+   (3) Планшеты / маленькие ноутбуки
+   (max-width: 64rem) => ~1024px
+   ========================================= */
+@media (max-width: 64rem) {
+    /* --- Блок адаптации героя, описаний и about --- */
+    .hero-section {
+        padding: 0;
+    }
     .description-block {
         position: static;
         flex-direction: column;
@@ -786,37 +972,29 @@ main {
         align-items: center;
         padding: 0 2rem;
     }
-
     .description-block .text-content {
         order: 1;
-        padding-left: 0;
-        padding-top: 0;
-        padding-right: 0;
+        padding: 0;
         max-width: 100%;
         margin-top: 0;
+        margin-left: 0;
     }
-
     .image-content {
         position: static;
         order: 2;
-        left: auto;
-        top: auto;
         transform: none;
         width: 114%;
-        margin: -5rem -10%;
-        display: block;
     }
-
     .about-content {
         flex-direction: column;
         gap: 2.5rem;
-        margin-top: 0rem;
+        margin-top: 0;
     }
     .about-text h1 {
-        font-size: 2.625rem; 
+        font-size: 2.625rem;
     }
     .about-text p {
-        font-size: 1.125rem; 
+        font-size: 1.125rem;
         line-height: 1.5;
     }
     .author-photo {
@@ -824,9 +1002,8 @@ main {
         margin-top: 2rem;
         align-self: center;
     }
-
     .content-wrapper {
-        flex-direction: column; 
+        flex-direction: column;
         gap: 1.875rem;
     }
     .platforms-list {
@@ -838,61 +1015,29 @@ main {
         width: 100%;
     }
 
+    /* --- Блок адаптации text-block (музыка) --- */
     .text-block.expanded {
-        width: 95vw;
-        height: 95vh;
-        padding: 1.875rem;
-        gap: 1.875rem;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        padding: 2rem;
     }
-    .text-block.expanded .text-content {
-        width: 55%;
-        font-size: 0.9em;
-    }
-    .text-block.expanded .expanded-image {
-        width: 45%;
-    }
-    .text-block h1 {
-        font-size: 1.5rem; 
-        margin-bottom: 0.9375rem; 
-    }
+    
 
+
+    /* --- Grid-container и изображения --- */
     .grid-container {
-        display: flex;
         flex-direction: column;
         gap: 0.9375rem;
         padding: 2vw;
     }
-
     .album-image img {
-        width: 300%;
+
         height: auto;
     }
-    
 
-}
-
-/* ---------- max-width: 844px (52.75rem) ---------- */
-@media (max-width: 52.75rem) {
-    .text-block {
-        width: 100%;
-        height: 20.3125rem;
-        margin: 0;
-    }
-
-    .image-block {
-        width: 100%;
-        height: 20.3125rem;
-        margin: 0;
-    }
-
-    .grid-container {
-        padding: 0 1rem;
-    }
-}
-
-/* ---------- max-width: 768px (48rem) ---------- */
-@media (max-width: 48rem) {
-    header {
+    /* --- Header, меню и т.д. --- */
+    .header {
         padding: 0.9375rem 1.25rem;
         gap: 1.25rem;
     }
@@ -903,43 +1048,28 @@ main {
         width: 6.25rem;
     }
     .main-nav a {
-        font-size: 0.8rem;
-    }
-    h1, 
-    .page-main h1,
-    .index-main h1,
-    main h1 {
-        font-size: 1.5rem;
-    }
-    p {
-        font-size: 1rem;  
-        line-height: 1.4;
-    }
-    .page-main {
-        padding: 1.25rem;
-    }
-    .angels-decoration {
-        width: 12.5rem;
-    }
-    .angels-decoration img {
-        margin-bottom: 1.875rem;
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
     }
 
-    /* Общие стили для выпадающих меню */
-    .main-nav,
-    .language-selector {
+    /* --- Выпадающие меню (main-nav, language-selector) --- */
+    .main-nav {
         position: relative;
         background-color: var(--primary-color);
-        padding: 0.9375rem 1.25rem;
+        padding: 1rem 6rem;
         border-radius: var(--border-radius-small);
         text-align: center;
-        margin: 1vw;
+        margin: 9vw;
         cursor: pointer;
-        width: 9rem;
+        width: 16rem;
         font-size: 0.8rem;
     }
-
-    /* Стили для выпадающих списков */
+    .album-layout {
+        display: flex;
+        gap: 5rem;
+        margin-bottom: 2.5rem;
+        flex-direction: column;
+    }
     .main-nav ul,
     .lang-options {
         display: none;
@@ -957,73 +1087,212 @@ main {
         z-index: 1000;
     }
 
-    /* Стили для элементов списка */
-    .main-nav ul li,
-    .lang-options div {
-        padding: 0.5rem 0rem;
+    .main-nav ul li {
+        padding: 0.5rem 0;
         cursor: pointer;
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         white-space: nowrap;
     }
-
-    /* Специальный отступ для длинных пунктов меню */
-    .main-nav ul li:nth-child(2),  /* ÜBER AUTOR */
-    .main-nav ul li:nth-child(3) {
-        margin-left: -3rem;
+    .lang-options div {
+        padding: 1.2rem 1rem;
     }
-
-    /* Показываем выпадающие списки при ховере */
     .main-nav:hover ul,
     .language-selector:hover .lang-options {
         display: block;
     }
-
-    /* Изменение радиуса при ховере */
     .main-nav:hover,
     .language-selector:hover {
         border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
     }
-
-    /* Добавляем текст "MENU" */
     .main-nav::after {
         content: 'MENU';
         display: block;
         font-size: 0.8rem;
     }
 
-    .columns-container {
-        position: static;
-        order: 2;
-        height: auto;
-        margin-top: 2rem;
+    /* --- Ещё переопределения для main-nav, music-grid из старого кода --- */
+    .main-nav a {
+        font-size: 1.2rem; /* эта строка «доминирует» над font-size:1rem */
+        padding: 0.4rem 0.9rem;
     }
-    .columns-image {
-        position: static;
-        height: auto;
+    .main-nav ul {
+        gap: 1.5rem;
+    }
+    .music-grid {
+        margin-left: 0rem;
+    }
+}
+
+/* =========================================
+   (4) max-width: 52.75rem => ~844px
+   ========================================= */
+@media (max-width: 52.75rem) {
+
+    .image-block {
         width: 100%;
+        height: 20.3125rem;
+        margin: 0;
     }
-    .index-main {
-        display: flex;
-        flex-direction: column;
-        height: auto;
+    .grid-container {
+        padding: 0 1rem;
     }
-    .welcome-container {
-        order: 1;
-        margin-top: 2rem;
+    .text-block h1 {
+        margin: 0rem 0rem 4rem 1rem;
+        font-size: 3rem;
     }
-    .description-index {
-        order: 1;
+    .text-block.expanded .expanded-image {
+        width: 140%;
+        padding: 0rem;
+    }
+}
+
+/* =========================================
+   (5) Маленькие планшеты
+   (max-width: 50rem) => ~800px
+   ========================================= */
+@media (max-width: 50rem) {
+
+    .logo {
+        left: 1.25rem;
+    }
+    .logo img {
+        width: 6.25rem;
+    }
+    .main-nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .welcome-block h1,
+    .listen-title h1 {
+        font-size: 1.9rem;
+    }
+    h1, .page-main h1, .index-main h1, main h1, .dl-gdocs-top-icon, .dl-gdocs-top-icon-modal, .dl-gslides-icon {
+        font-family: 'Bergamasco', sans-serif;
+        font-weight: 200;
+        font-size: 1.75rem;
+        line-height: 1.2;
+        color: var(--text-color);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
+    /* Выпадающие меню */
+    .main-nav {
+        position: relative;
+        background-color: var(--primary-color);
+        padding: 0.9375rem 4rem;
+        border-radius: var(--border-radius-small);
+        text-align: center;
+        margin: 1vw;
+        cursor: pointer;
+        width: 9rem;
+        font-size: 0.8rem;
+    }
+    .main-nav ul,
+    .lang-options {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transform: none;
+        background-color: var(--primary-color);
+        border-radius: 0 0 var(--border-radius-bottom) var(--border-radius-bottom);
+        padding-bottom: 1rem;
+        border-bottom: var(--border-bottom);
+        text-align: center;
+        z-index: 1000;
+    }
+    .main-nav ul li,
+    .lang-options div {
+        padding: 0.5rem 0;
+        cursor: pointer;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+    .main-nav:hover ul,
+    .language-selector:hover .lang-options {
+        display: block;
+    }
+    .main-nav:hover,
+    .language-selector:hover {
+        border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+    }
+    .main-nav::after {
+        content: 'MENU';
+        display: block;
+        font-size: 0.8rem;
+    }
+    .text-block.expanded .expanded-image {
+        width: 140%;
+        padding: 0rem;
+    }
+}
+
+/* =========================================
+   (6) max-width: 48rem => ~768px
+   ========================================= */
+@media (max-width: 48rem) {
+    /* Музыкальные блоки */
+    .music-block.large {
+        min-height: 25rem;
+    }
+    .music-block.small {
+        width: 10rem;
+        height: 10rem;
+    }
+    /* Кнопка закрытия в развернутом text-block */
+    .close-button {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    .close-button::before,
+    .close-button::after {
+        width: 1.2rem;
+    }
+    /* Добавляем поддержку свайпа для закрытия */
+    .text-block.expanded {
+        touch-action: none; /* Предотвращаем стандартные жесты браузера */
+    }
+    .text-block.expanded .expanded-image {
+        width: 20rem;
+        padding: 1rem;
+    }
+
+}
+
+/* =========================================
+   (7) max-width: 46rem => ~736px
+      (В коде шло как "max-width: 768px", но реально 46rem ~736px)
+   ========================================= */
+@media (max-width: 46rem) {
+
+    p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    .page-main {
+        padding: 1.25rem;
+    }
+    .angels-decoration {
+        width: 12.5rem;
+    }
+    .angels-decoration img {
+        margin-bottom: 1.875rem;
+    }
+
+    /* Выпадающие меню */
+
     .buy-detail-main {
-        padding: 1.25rem; 
+        padding: 1.25rem;
     }
     .album-image img {
-        width: 150%;
-        margin-left: -25%;
+        width: 90%;
+        margin-left: 2%;
     }
     .album-title {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
         text-align: left;
     }
     .album-layout {
@@ -1031,19 +1300,21 @@ main {
         gap: 1.875rem;
     }
     .part-number {
-        font-size: 1.25rem; 
-        margin-top: 1.25rem; 
+        font-size: 1.25rem;
+        margin-top: 1.25rem;
     }
     .track-list h2 {
-        font-size: 1rem; 
-        margin: 0.625rem 0; 
+        font-size: 1rem;
+        margin: 0.625rem 0;
     }
     .action-buttons {
         margin-top: 1.25rem;
     }
-    .buy-button, .listen-button, .price-button {
+    .buy-button,
+    .listen-button,
+    .price-button {
         padding: 0.625rem 1.875rem;
-        font-size: 1rem;
+        font-size: 0.71rem;
     }
     .album-description {
         font-size: 1rem;
@@ -1052,8 +1323,8 @@ main {
         max-width: 90vw;
     }
     .back-button {
-        bottom: 0.3125rem; 
-        right: 1.25rem;    
+        bottom: 0.3125rem;
+        right: 1.25rem;
     }
     .products-grid {
         grid-template-columns: 1fr;
@@ -1063,36 +1334,77 @@ main {
     .product-item {
         max-width: 100%;
     }
-
     .grid-container {
-        display: flex;
         flex-direction: column;
         gap: 0.9375rem;
         padding: 0 0.9375rem;
     }
-
     .text-block {
-        width: 100%;
-        height: 20.3125rem; /* фиксированная высота */
-        margin: 0;
-        box-sizing: border-box;
-        min-height: auto; /* убираем min-height */
+        height: 8rem;
+        padding: 0.75rem 1rem;
     }
-
-    .image-block {
-        width: 100%;
-        height: 20.3125rem; /* фиксированная высота */
-        margin: 0;
-    }
-
-    /* Стили для развернутого состояния */
     .text-block.expanded {
-        height: 90vh;
-        width: 90vw;
+        width: 100vw;
+        height: 100vh;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .text-block.expanded .text-content {
+        width: 100%;
+        height: auto;
+        padding: 0.5rem;
+        text-align: justify;
+
+        margin-left: 0 !important;
+    }
+
+    .text-block.expanded h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .text-block.expanded p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+    }
+    .text-block.expanded {
+        gap: 1rem !important;
+    }
+    .music-grid {
+        margin-left: 0rem !important;
+    }
+    .music-grid .text-block {
+        background-color: #C07777;
+
+
+    }
+    .text-content {
+        margin: 0;
+    }
+    .text-block h1 {
+        margin: 8rem 0 6.25rem 0;
+        font-size: 8vw;
+    }
+    .image-block {
+        width: auto;
+        height: auto;
+    }
+    .image-block img {
+        width: 10rem;
+    }
+    .text-block.expanded .expanded-image {
+        width: 10rem;
+        padding: 1rem;
     }
 }
 
-/* ---------- max-width: 480px (30rem) ---------- */
+/* =========================================
+   (8) max-width: 30rem => ~480px (мобильные)
+   ========================================= */
 @media (max-width: 30rem) {
     .logo img {
         width: 5rem;
@@ -1102,8 +1414,8 @@ main {
         align-items: normal;
     }
     .main-nav a {
-        font-size: 0.5rem;
-        padding: 0.0625rem 0.1875rem !important;
+        font-size: 0.8rem;
+        padding: 0.3rem 0.1rem;
     }
     .main-nav .active-page {
         padding: 0.2rem 0.1rem !important;
@@ -1113,15 +1425,14 @@ main {
         padding: 0rem 0.1rem !important;
     }
     .language-selector {
-        font-size: 0.6rem;
-        padding: 0.1875rem 0.375rem;
+        font-size: 0.7rem;
     }
     .lang-options div {
         font-size: 0.625rem;
-        padding: 0.125rem 0.375rem;
     }
     header {
         padding: 0.125rem 0.3125rem;
+        gap: 0.25rem;
     }
     .logo {
         font-size: 0.75rem;
@@ -1134,24 +1445,19 @@ main {
         align-items: center;
     }
     .columns-image {
-        width: 75%;
-        height: auto;
-        max-width: 112%;
-        margin: 0;
-        margin-left: 0vw;
+        width: 150%;
+        padding-bottom: 10vw;
+        margin-left: -34vw;
     }
-
-    
-
     .angels-container {
         top: -2.5rem;
         width: 35%;
     }
     .angels-image {
-        height: 7rem; 
+        height: 11rem;
     }
     .welcome-container {
-        top: 5.9375rem; 
+        top: 5.9375rem;
     }
     .welcome-container h1 {
         font-size: 1.375rem;
@@ -1162,14 +1468,14 @@ main {
         line-height: 1.2;
     }
     .description-index {
-        position: static; 
+        position: static;
         max-width: 90vw;
         margin: 1.5rem auto 0 auto;
         text-align: justify;
         height: auto;
     }
     .description-index p {
-        font-size: 0.9rem; 
+        font-size: 0.9rem;
         line-height: 1.4;
     }
     .content-wrapper {
@@ -1179,8 +1485,8 @@ main {
         padding: 0.75rem 0.9375rem;
     }
     .platform-link span {
-        font-size: 1rem;
-        margin-right: 1.875rem;
+        font-size: 0.8rem;
+        margin-right: 0rem;
     }
     .album-title {
         font-size: 1.5rem;
@@ -1189,133 +1495,192 @@ main {
         padding: 0 0.5rem;
     }
     .text-block {
-        height: 8rem; /* меньшая высота для мобильных */
-        padding: 0.75rem 1rem;
+        height: auto;
+        padding: 0.5rem 0.3rem;
     }
     .text-block.expanded {
         width: 100vw;
         height: 100vh;
+        padding: 1.5rem;
+        border-radius: 0;
+    }
+    .text-block.expanded .text-content {
         padding: 1rem;
     }
-    .text-block h1 {
-        font-size: 1.125rem; 
-    }
-    .text-block p {
-        font-size: 0.8rem; 
-        line-height: 1.4;
-    }
     .text-block.expanded .expanded-image {
-        max-height: 35vh;
+        width: 10rem;
+        padding: 1rem;
+    }
+    
+    
+    .text-block.expanded h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .text-block.expanded p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
     }
     .image-content {
         width: 180%;
         margin: 1rem -40%;
-        
+        margin-bottom: 20px;
     }
     .main-nav ul li:nth-child(2),
     .main-nav ul li:nth-child(3) {
-        margin-left: 0; /* убираем отступ на маленьких экранах */
+        margin-left: 0;
     }
     .album-image img {
         width: 100%;
         max-width: 35rem;
         margin-left: 0;
     }
-    .description-block, .text-content p {
-        gap: 0rem;
-        margin-bottom: 0rem;
+    .description-block,
+    .text-content p {
+        gap: 0;
+        margin-bottom: 0;
+    }
+    .main-nav {
+        width: 7rem;
+        padding: 0.7rem 3rem;
+        font-size: 0.7rem;
+    }
+    .music-grid {
+        margin-left: 0rem !important;
+    }
+    .play-button {
+        width: 1rem;
+        height: 1rem;
+        right: 0.8rem;
+    }
+    .music-grid .text-block {
+        background-color: #C07777;
+
+    }
+    .image-block {
+        width: auto;
+        height: auto;
+    }
+
+    .text-content {
+        margin: 0;
+    }   
+    .text-block h1 {
+        font-size: 7vw;
+        margin: 8rem 3rem 7.25rem 0.4rem;
     }
 }
 
-/* ---------- max-width: 320px (20rem) ---------- */
-@media (max-width: 20rem) {
-    .columns-container {
-        margin-top: 80vh;
-        width: 100%;
+/* =========================================
+   (9) max-width: 23.4375rem => ~375px
+   ========================================= */
+@media (max-width: 23.4375rem) {
+    .action-buttons {
+        gap: 0.25rem;
     }
-    .page-main.listen-main h1 {
-        font-size: 1.25rem; 
-        line-height: 1.2;
+    .grid-container {
+        padding: 0rem 0.5rem;
     }
-}
+    .music-grid .text-block {
+        background-color: #C07777;
 
-@media (max-width: 30rem) {
-    .main-nav,
+    }
+    .text-block h1 {
+        font-size: 7vw;
+        margin: 9rem 3rem 7.25rem 0.4rem;
+    }
+
     .language-selector {
+        padding: 0.9375rem 0.875rem;
+    }
+    .music-grid {
+        margin: 0rem;
+        padding-top: 2rem;
+    }
+    .hover-image img {
+        width: 92%;
+        height: auto;
+    }
+    .main-nav {
         width: 7rem;
         padding: 0.7rem 1rem;
         font-size: 0.7rem;
     }
-}
-
-/* Обновляем стили для welcome-block */
-.welcome-block {
-    width: 100%;
-    max-width: 75rem;
-    text-align: center;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    position: relative;
-    z-index: 3;
-}
-
-/* Обновляем стили для адаптива */
-@media (max-width: 48rem) {
-    .welcome-block {
-        margin-top: -2rem;
-        margin-bottom: 4rem;
-        position: relative;
-        z-index: 3;
-    }
-
-    .welcome-block h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-}
-
-@media (max-width: 30rem) {
-    .welcome-block {
-        margin-top: 0rem;
-        margin-bottom: 2rem;
-    }
-
-    .welcome-block h1 {
-        font-size: 2rem;
-    }
-}
-
-/* ---------- max-width: 1000px (62.5rem) ---------- */
-@media (max-width: 62.5rem) {
-    .main-nav ul {
-        gap: 0.25rem !important; 
+    .author-photo img {
+        padding: 2rem;
     }
     .main-nav a {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.5rem !important;
+        font-size: 0.5rem;
+        padding: 0.3rem 0.1rem;
     }
-    .logo {
-        font-size: 1rem;
+    .platform-link span {
+        font-size: 0.7rem;
     }
-    .main-nav .active-page {
-        padding: 0.3rem 0.6rem !important;
+}
+
+
+
+@media (min-width: 48rem) {
+    .text-block.expanded {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem 6rem;
+        gap: 4rem;
     }
 
-    .angels-container {
-        top: -7.5rem; 
-        width: 40%;
+    .text-block.expanded .expanded-image {
+        order: 1; /* Картинка справа */
+        flex: 0 0 35%;
+
+        object-fit: contain;
     }
-    .welcome-container {
-        top: 13rem;
+
+    .text-block.expanded .text-content {
+        flex: 0 0 55%;
+        height: auto;
+        max-height: none;
+        overflow-y: visible;
+        padding: 0;
     }
-    .welcome-container h1 {
-        font-size: 3.125rem; 
+
+    .text-block.expanded h1 {
+        font-size: clamp(2.5rem, 3vw, 4rem);
+        margin: 0 0 2rem 0;
     }
-    .description-index {
-        top: 100%;
-        right: 4rem; 
-        max-width: 40rem; 
-        text-align: center;
-        margin-left: 2rem;
+
+    .text-block.expanded p {
+        font-size: clamp(1rem, 1.2vw, 1.4rem);
+        line-height: 1.6;
+        margin: 0;
     }
+}
+
+/* Дополнительные оптимизации для очень больших экранов */
+@media (min-width: 75rem) {
+    .text-block.expanded {
+        padding: 5rem 8rem;
+    }
+
+    .text-block.expanded .text-content {
+        flex: 0 0 50%;
+    }
+
+
+}
+
+@media (min-width: 120rem) {
+    .text-block.expanded {
+        padding: 6rem 10rem;
+        max-width: 160rem;
+        margin: 0 auto;
+    }
+
+    .text-block.expanded .text-content {
+        max-width: 60rem;
+    }
+
 }
