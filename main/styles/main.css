@@ -369,7 +369,7 @@ main {
    ============================= */
 .about-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     gap: 2.5rem;
     margin-top: 10vh;
@@ -643,6 +643,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}    .products-grid {
+
+    padding-bottom: 0rem;
+ 
 }
 /* =============================
    13. MUSIC
@@ -908,14 +912,15 @@ main {
         width: max-content;
         height: auto;
     }
-text-block.expanded .expanded-image {
-    display: block;
-    opacity: 1;
-    width: 64%;
-    margin: 14rem;
-}
-
-
+    text-block.expanded .expanded-image {
+        display: block;
+        opacity: 1;
+        width: 64%;
+        margin: 14rem;
+    }
+    .content-wrapper {
+        padding: 2.5rem 2.5rem 7.875rem 2.5rem;
+    }
 }
 
 /* =========================================
@@ -1144,6 +1149,7 @@ text-block.expanded .expanded-image {
         width: 140%;
         padding: 0rem;
     }
+
 }
 
 /* =========================================
