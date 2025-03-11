@@ -1,20 +1,22 @@
-/* =============================
-   1. Подключение шрифта
-   ============================= */
-   @font-face {
-    font-family: 'Bergamasco';
-    src: url('../../font/Bergamasco-Light.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-}
 @font-face {
     font-family: 'Bergamasco';
-    src: url('../../font/Bergamasco-Light.woff') format('woff');
+    src: url('../../font/Bergamasco-Light.woff') format('woff'),
+         url('../../font/Bergamasco-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Bergamasco';
+    src: url('../../font/Bergamasco-Bold.woff') format('woff'),
+         url('../../font/Bergamasco-Bold.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 
 /* =============================
    2. Переменные (root)
@@ -51,7 +53,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     padding-top: 5rem;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Bergamasco', sans-serif; /* Добавил шрифт */
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -79,10 +81,12 @@ main h1,
 }
 
 p {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1rem;
-    line-height: 1.4;
-    font-weight: 300;
-    font-variation-settings: "wdth" 100;
+    line-height: 1.6;
     color: var(--text-color);
 }
 
@@ -103,7 +107,8 @@ header {
     padding: var(--header-padding);
     background-color: var(--background-color);
     z-index: 1000;
-    font-family: "Bergamasco", sans-serif;
+    font-family: 'Bergamasco';
+    font-weight: 600;
 }
 
 .logo {
@@ -123,6 +128,7 @@ header {
     width: 5.5rem;
     height: auto;
     transition: transform 0.3s ease;
+    padding: 1rem;
 }
 .logo a:hover img {
     transform: scale(1.05);
@@ -140,6 +146,8 @@ header {
     margin: 0;
     padding: 0;
     list-style: none;
+    font-family: 'Bergamasco';
+    font-weight: 600;
 }
 .main-nav a {
     display: inline-block;
@@ -153,6 +161,9 @@ header {
     font-family: "Bergamasco", sans-serif;
     font-weight:900;
     font-variation-settings: "wdth" 100;
+    font-family: 'Bergamasco';
+    font-weight: 500;
+
 }
 .main-nav .active-page {
     background-color: var(--primary-color) !important;
@@ -182,9 +193,16 @@ header {
     cursor: pointer;
     font-weight: 600;
     font-variation-settings: "wdth" 100;
+    min-width: 8rem;
+    font-family: 'Bergamasco', sans-serif;
+    font-weight: bold; /* Попробуй изменить на 900 */
+    font-variation-settings: normal;
 }
+
 .current-lang {
     cursor: pointer;
+    font-family: 'Bergamasco';
+    font-weight: 500;
 }
 .lang-options {
     display: none;
@@ -201,12 +219,24 @@ header {
 .lang-options div {
     padding: 0.625rem 1rem;
     cursor: pointer;
+
+    font-family: 'Bergamasco';
+    font-weight: 500;
+    
+
 }
 .language-selector:hover .lang-options {
     display: block;
 }
 .language-selector:hover {
     border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+}
+.main-nav {
+    width: 7rem;
+    padding: 0.7rem 3rem;
+    font-size: 0.7rem;
+    font-family: 'Bergamasco';
+    font-weight: 500;
 }
 
 /* =============================
@@ -243,6 +273,7 @@ main {
     transform: translateX(-50%);
     width: 18.75rem;
     z-index: 100;
+    min-width: 6rem;
 }
 .angels-decoration img {
     width: 100%;
@@ -316,6 +347,7 @@ main {
     text-transform: uppercase;
     position: relative;
     z-index: 4;
+    font-family: 'Bergamasco', sans-serif; /* Добавил шрифт */
 }
 
 .description-block {
@@ -362,6 +394,8 @@ main {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    word-break: break-word; /* Позволяет переносить слова */
+    overflow-wrap: break-word; /* Работает во всех браузерах */
 }
 
 /* =============================
@@ -764,6 +798,7 @@ main {
 .index-main .text-block {
     height: auto;
     overflow: visible;
+    max-width: 100%;
 }
 
 /* Стили для text-block на странице About Music */
@@ -1278,6 +1313,7 @@ text-block.expanded .expanded-image {
     }
     .angels-decoration {
         width: 12.5rem;
+      
     }
     .angels-decoration img {
         margin-bottom: 1.875rem;
@@ -1427,6 +1463,7 @@ text-block.expanded .expanded-image {
     }
     .language-selector {
         font-size: 0.7rem;
+        min-width: 26%;
     }
     .lang-options div {
         font-size: 0.625rem;
@@ -1573,6 +1610,12 @@ text-block.expanded .expanded-image {
         font-size: 7vw;
         margin: 8rem 3rem 7.25rem 0.4rem;
     }
+   
+    .main-nav a {
+        font-size: 0.6rem;
+        padding: 0.3rem 0.1rem;
+    }
+    
 }
 
 /* =========================================

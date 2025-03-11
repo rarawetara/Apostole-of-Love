@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Важно: мета-тег адаптива -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anatolii Dolesko World</title>
-    <!-- Подключаем общий main.css (если нужно) -->
-    <!-- <link rel="stylesheet" href="main/styles/main.css" /> -->
-
-    <!-- Подключаем index.css (исправленный) -->
     <link rel="stylesheet" href="main/styles/main.css" />
-    <script src="index.js" defer></script>
+    <script src="main/scripts/lang.js" defer></script>
   </head>
   <body>
     <!-- Прелоадер -->
@@ -31,74 +26,58 @@
 
       <nav class="main-nav">
         <ul>
-          <li>
-            <a href="about/about.html">ABOUT AUTHOR</a>
-          </li>
-          <li>
-            <a href="listen/listen.html">LISTEN</a>
-          </li>
-          <li>
-            <a href="buy/buy.html">BUY</a>
-          </li>
-          <li>
-            <a href="music/music.html">ABOUT MUSIC</a>
-          </li>
+          <li><a href="about/about.html" data-translate="about">ABOUT AUTHOR</a></li>
+          <li><a href="listen/listen.html" data-translate="listen">LISTEN</a></li>
+          <li><a href="buy/buy.html" data-translate="buy">BUY</a></li>
+          <li><a href="music/music.html" data-translate="about-music">ABOUT MUSIC</a></li>
         </ul>
       </nav>
 
-      <div class="cart-icon">CART</div>
+      <div class="cart-icon" data-translate="cart">CART</div>
 
       <div class="language-selector">
-        <div class="current-lang">LANGUAGE</div>
+        <div class="current-lang" data-translate="language">LANGUAGE</div>
         <div class="lang-options">
-          <div>UKRAINIAN</div>
-          <div>GERMAN</div>
-          <div>SPANISH</div>
+          <div data-lang="en">ENGLISH</div>
+          <div data-lang="ua">UKRAINIAN</div>
+          <div data-lang="de">GERMAN</div>
+          <div data-lang="es">SPANISH</div>
         </div>
       </div>
     </header>
 
     <!-- Основной контент -->
     <main class="hero-section index-main">
-      <!-- 1. Блок ангелов -->
       <div class="angels-block">
         <img src="main/images/angels.png" alt="Angels" class="angels-image" />
       </div>
 
-      <!-- 2. Блок приветствия -->
       <div class="welcome-block">
-        <h1>WELCOME TO<br />ANATOLII DOLESKO WORLD</h1>
+        <h1 id="welcome-text">WELCOME TO<br />ANATOLII DOLESKO WORLD</h1>
 
-        <!-- 3. Блок «картинка слева – текст справа» -->
         <div class="description-block">
           <div class="image-content">
             <div class="columns-block">
-              <img
-                src="main/images/index.png"
-                alt="Columns"
-                class="columns-image"
-              />
+              <img src="main/images/index.png" alt="Columns" class="columns-image" />
             </div>
           </div>
           <div class="text-content">
             <div class="text-block">
-
-              <p>
+              <p data-translate="intro-1">
                 Anatolii Dolesko is a visionary composer whose music transcends
                 boundaries and resonates deeply with audiences worldwide.
-                
               </p>
-              <p>
+              <p data-translate="intro-2">
                 His compositions weave intricate melodies, blending classical
                 traditions with modern innovations to create truly unique
                 soundscapes.
               </p>
-              <p>
+              <p data-translate="intro-3">
                 Join Anatolii on his musical journey by following him on social
                 media. Get behind-the-scenes updates, exclusive content, and a
                 closer look at his creative process.
               </p>
-              <p>
+              <p data-translate="intro-4">
                 Let the music of Anatolii Dolesko inspire you. Explore his world,
                 and immerse yourself in the artistry of one of today's most
                 compelling composers.
@@ -108,7 +87,7 @@
         </div>
       </div>
     </main>
-    <!-- Скрипты -->
+
     <script src="main/scripts/main.js"></script>
   </body>
 </html>
