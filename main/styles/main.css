@@ -320,9 +320,10 @@ main {
 /* Блок ангелов */
 .angels-block {
     width: 100%;
-    max-width: 20rem; /* Изменено для согласованности */
+    max-width: 15rem;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 4rem;
 }
 .angels-image {
     width: 100%;
@@ -1492,7 +1493,7 @@ text-block.expanded .expanded-image {
         width: 35%;
     }
     .angels-image {
-        height: 11rem;
+        height: 5rem;
     }
     .welcome-container {
         top: 5.9375rem;
