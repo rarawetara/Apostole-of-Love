@@ -179,18 +179,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             window.addEventListener("resize", handleResize);
 
-            function toggleMobileNav(e) {
-                if (window.innerWidth <= 768) {
-                    if (e.target.closest(".main-nav")) {
-                        navListMobile.classList.toggle("active");
-                    } else {
-                        navListMobile.classList.remove("active");
-                    }
-                }
-            }
-
-            document.addEventListener("click", toggleMobileNav);
-
             function initializeMobileNav() {
                 mainNav.addEventListener("click", (e) => {
                     if (!e.target.closest("a")) {
