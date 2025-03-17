@@ -1079,24 +1079,20 @@ text-block.expanded .expanded-image {
         padding: 0.4rem 0.8rem;
     }
 
-    /* --- Выпадающие меню (main-nav, language-selector) --- */
     .main-nav {
         position: relative;
         background-color: var(--primary-color);
         padding: 1rem 6rem;
         border-radius: var(--border-radius-small);
         text-align: center;
-        margin: 9vw;
+        /* Вместо 9vw ставим 2vw auto, чтобы центрировать и не уползало */
+        margin: 2vw auto;
         cursor: pointer;
         width: 16rem;
         font-size: 0.8rem;
     }
-    .album-layout {
-        display: flex;
-        gap: 5rem;
-        margin-bottom: 2.5rem;
-        flex-direction: column;
-    }
+
+    /* Прячем меню по умолчанию, раскрываем по JS (не через :hover) */
     .main-nav ul,
     .lang-options {
         display: none;
@@ -1120,9 +1116,12 @@ text-block.expanded .expanded-image {
         font-size: 1.2rem;
         white-space: nowrap;
     }
+
     .lang-options div {
         padding: 1.2rem 1rem;
     }
+
+    /* Удаляем/комментируем :hover, чтобы не ломать клики на мобильном
     .main-nav:hover ul,
     .language-selector:hover .lang-options {
         display: block;
@@ -1131,10 +1130,14 @@ text-block.expanded .expanded-image {
     .language-selector:hover {
         border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
     }
+    */
+
+    /* Чтобы псевдоэлемент 'MENU' не перехватывал клики */
     .main-nav::after {
         content: 'MENU';
         display: block;
         font-size: 0.8rem;
+        pointer-events: none;
     }
 
     /* --- Ещё переопределения для main-nav, music-grid из старого кода --- */
