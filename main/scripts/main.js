@@ -37,9 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let isBackNavigation = false;
-    if (performance?.getEntriesByType) {
+    if (performance && typeof performance.getEntriesByType === "function") {
         const navigationEntries = performance.getEntriesByType("navigation");
         isBackNavigation = navigationEntries.length > 0 && navigationEntries[0].type === "back_forward";
+    } else {
+        console.warn("Performance navigation not supported; skipping back detection");
     }
 
     if (!isFirstVisit || isBackNavigation) {
@@ -60,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     video.preload = "auto";
 
     // Уменьшаем таймаут для мобильных устройств
-    const timeoutDuration = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 1500 : 3000;
+    const timeoutDuration = 5000;
 
     const preloaderTimeout = setTimeout(() => {
         if (preloader && preloader.style.display !== "none") {
