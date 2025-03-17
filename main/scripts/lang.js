@@ -1,3 +1,6 @@
+window.onerror = function (msg, url, lineNo, columnNo, error) {
+  console.error("JS Ошибка:", msg, "в", url, "на строке", lineNo, "колонка", columnNo, error);
+};
 const translations = {
   en: {
     language: "LANGUAGE",
@@ -144,9 +147,13 @@ function loadLanguage() {
   changeLanguage(savedLanguage);
 }
 
-// Ждём полной загрузки DOM и активируем кнопки
 document.addEventListener("DOMContentLoaded", () => {
   loadLanguage();
+
+  // Получаем выбранный язык из localStorage или по умолчанию "en"
+  const currentLang = localStorage.getItem("selectedLanguage") || "en";
+  document.querySelector(".current-lang").textContent = translations[currentLang].language;
+  document.querySelector(".current-lang").style.fontFamily = "'Bergamasco', sans-serif";
 
   document.querySelectorAll(".lang-options div").forEach((button) => {
     button.addEventListener("click", (event) => {
@@ -154,6 +161,4 @@ document.addEventListener("DOMContentLoaded", () => {
       changeLanguage(selectedLang);
     });
   });
-  document.querySelector(".current-lang").textContent = translations[lang].language;
-  document.querySelector(".current-lang").style.fontFamily = "'Bergamasco', sans-serif";
 });

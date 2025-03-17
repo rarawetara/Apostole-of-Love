@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Bergamasco';
-    src: url('../../font/Bergamasco-Light.woff') format('woff'),
-         url('../../font/Bergamasco-Light.woff2') format('woff2');
+    src: url('../../font/Bergamasco-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -9,8 +8,7 @@
 
 @font-face {
     font-family: 'Bergamasco';
-    src: url('../../font/Bergamasco-Bold.woff') format('woff'),
-         url('../../font/Bergamasco-Bold.woff2') format('woff2');
+    src: url('../../font/Bergamasco-Bold.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -416,7 +414,7 @@ main {
     max-width: 37.5rem;
 }
 .about-text .birth {
-    margin: 1.25rem 0 0.3125rem 0;
+    margin: 1.25rem 0 0.3125rem 0.2rem;
 }
 .author-photo {
     align-self: flex-end;
@@ -701,7 +699,7 @@ main {
     height: 20.3125rem;
     width: 40.625rem;
     transition: all 0.3s ease;
-    cursor: pointer;
+
     overflow: hidden;
 
     
