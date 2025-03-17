@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const isHomePage =
         window.location.pathname === "/" ||
         window.location.pathname.endsWith("/index.html");
+        
 
     // Проверяем поддержку видео на устройстве
     const isVideoSupported = video && video.canPlayType &&
